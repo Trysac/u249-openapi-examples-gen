@@ -1,0 +1,52 @@
+{
+  "name": "@trysac/openapi-examples-gen",
+  "version": "0.0.0",
+  "description": "Fill missing examples in OpenAPI 3.x documents with deterministic, realistic values from schemas, formats and property names, and validate the examples already written",
+  "license": "MIT",
+  "author": "Miguel Gomez",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trysac/u249-openapi-examples-gen.git"
+  },
+  "homepage": "https://github.com/Trysac/u249-openapi-examples-gen#readme",
+  "bugs": {
+    "url": "https://github.com/Trysac/u249-openapi-examples-gen/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "biome ci .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --coverage",
+    "check": "node scripts/check.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.4",
+    "@types/node": "^26.6.6",
+    "@vitest/coverage-v8": "^5.0.5",
+    "eslint": "10.14.0",
+    "eslint-plugin-security": "4.2.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
