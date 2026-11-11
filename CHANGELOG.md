@@ -9,4 +9,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- Added deterministic OpenAPI example generation, filling, and validation with CLI.
 - Initial project structure from the factory utility template.
