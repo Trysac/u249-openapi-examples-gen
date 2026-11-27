@@ -1,7 +1,6 @@
 # openapi-examples-gen
 
-[![npm version](https://img.shields.io/npm/v/@trysac/openapi-examples-gen.svg)](https://www.npmjs.com/package/@trysac/openapi-examples-gen)
-[![license: MIT](https://img.shields.io/npm/l/@trysac/openapi-examples-gen.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![CI](https://github.com/Trysac/u249-openapi-examples-gen/actions/workflows/ci.yml/badge.svg)](https://github.com/Trysac/u249-openapi-examples-gen/actions/workflows/ci.yml)
 
 Fill missing examples in OpenAPI 3.x JSON documents with deterministic, realistic values from schemas, formats and property names, and validate the examples already written.
@@ -12,9 +11,15 @@ API documentation without examples is hard to read, and examples written by hand
 
 ## Install
 
+Not published to npm yet. Build it from a clone, then install it from the local path:
+
 ```sh
-npm install @trysac/openapi-examples-gen
+git clone https://github.com/Trysac/u249-openapi-examples-gen.git
+cd u249-openapi-examples-gen && npm ci && npm run build
+cd ../your-project && npm install ../u249-openapi-examples-gen
 ```
+
+Imports keep the package name: `import { ... } from "@trysac/openapi-examples-gen"`.
 
 Requires Node.js 20 or newer. The package ships ES modules with TypeScript declarations and has no runtime dependencies. Input is JSON only; YAML is out of scope.
 
